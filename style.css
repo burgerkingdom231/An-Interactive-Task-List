@@ -1,0 +1,139 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #0F62FE;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  min-height: 150px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 20px;
+}
+
+/* Heading */
+.container h1 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* New Task Section */
+#newtask {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#newtask input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+#newtask input:focus {
+  outline: none;
+  border-color: #0D75EC;
+}
+
+#newtask button {
+  padding: 12px 18px;
+  margin-left: 10px;
+  background: #0F62FE;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#newtask button:hover {
+  background: #0D75EC;
+}
+
+/* Task List */
+.tasks {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tasks::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tasks::-webkit-scrollbar-track {
+  background: #E6F3FF;
+  border-radius: 10px;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+  background: #0D75EC;
+  border-radius: 10px;
+}
+
+/* Task Item */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task:hover {
+  background: #E6F3FF;
+}
+
+.task label {
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task.done p {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Delete Button */
+.delete {
+  padding: 6px 10px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.delete:hover {
+  transform: scale(1.1);
+  background: #f5f5f5;
+}
