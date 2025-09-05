@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-<link rel="stylesheet" href="/style.css">
-<link fer="stylesheet" href="https://unicons.iconscount.com/releas/v4.0.0/css/line.css"></link></link>
-<script src="/script.js"></script>
-<script src="htts://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskHero</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <!-- Confetti & Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
 <body>
-<div class="container">
-<h1 id="head-text">Task List</h1>
-<div id="newtask">
-<input type="text" placeholder="Add a task">  
-<button id="push">Add</button>  
-</div>
-<div class="tasks"></div>
-</div>
+  <main class="container">
+    <h1>🦸 TaskHero</h1>
+
+    <!-- Mode Banner -->
+    <p id="mode-banner"></p>
+
+    <!-- Gamification Bar -->
+    <div class="gamify-bar">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <p id="stats">Level 1 | XP: 0</p>
+    </div>
+
+    <!-- Achievements -->
+    <section class="achievements">
+      <h3>🏅 Achievements</h3>
+      <ul id="achievement-list"></ul>
+    </section>
+
+    <!-- New Task Input -->
+    <section id="newtask">
+      <input type="text" id="taskInput" placeholder="Enter a new task" autocomplete="off">
+      <button id="push">Add Task</button>
+    </section>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" aria-live="polite"></div>
+
+    <!-- Task List -->
+    <section class="tasks"></section>
+  </main>
+
+  <!-- Mode Script -->
+  <script>
+    const mode = localStorage.getItem("taskhero_mode") || "kids";
+    document.getElementById("mode-banner").textContent =
+      `Mode: ${mode.charAt(0).toUpperCase() + mode.slice(1)}`;
+    document.body.classList.add(mode); // apply body theme class
+  </script>
 </body>
 </html>
