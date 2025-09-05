@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskHero - Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #0F62FE;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      background: #fff;
+      color: #333;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 { color: #0F62FE; margin-bottom: 24px; }
+    .btn {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      background: #0F62FE;
+      color: #fff;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .btn:hover { transform: translateY(-2px); background: #0D75EC; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🦸 TaskHero</h1>
+    <p>Welcome! Click below to try the app:</p>
+    <button class="btn" onclick="window.location.href='mode.html'">Launch TaskHero</button>
+  </div>
+</body>
+</html>
